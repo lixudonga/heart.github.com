@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="换色" onclick="changeColor();" />
+
+
+
+
+    <script type="text/javascript">
+        // 定义可换的颜色
+        var colors = ["#FFF5EE", "#EEB422", "#CDCDB4", "#ffff00", "#BCEE68", "#ff00ff", "F0FFF0", "#FF1493", "#EEE685", "#EEDFCC"
+            , "#CD69C9", "#C6E2FF", "#ADFF2F", "#9370DB", "#76EEC6"];
+        var index = 0;
+        // 换色方法
+        function changeColor() {
+            // 获取颜色代码
+            var color = colors[index++];
+            // 更改文档的背景色
+            document.bgColor = color;
+            if (index == colors.length) {
+                index = 0;
+            }
+        }
+    </script>
+
+</body>
+
+
+
+</html>
